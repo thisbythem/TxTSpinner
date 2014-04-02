@@ -5,12 +5,11 @@ class MainViewController < UIViewController
 
     logo_image = UIImage.imageNamed('txt-logo')
 
-    @logo_view = UIImageView.alloc.init
+    @logo_view = UIImageView.new
     @logo_view.userInteractionEnabled = true
     @logo_view.image = logo_image
     @logo_view.size = [logo_image.size.width, logo_image.size.height]
-    @logo_view.center = self.view.center
-
+    @logo_view.center = view.center
     @logo_view.when_tapped { logo_view_was_tapped }
 
     self.view.addSubview @logo_view
